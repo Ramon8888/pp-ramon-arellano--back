@@ -35,17 +35,12 @@ const UserSchema = new Schema({
     },
     age: {
         type: Number,
-        required: true,
-        validate: [
-            function(age){
-                return age.length = 2;
-            },
-            'Invalid age']
+        required: true
     },
     gender: {
         type: String,
         required: true,
-        enum: ['Man','Woman']
+        enum: ['M','F']
     },
     hobbie: {
         type: String,
