@@ -38,7 +38,7 @@ router.post('/add', tokenValidation, async (req, res, next) => {
 // All users sevice
 router.get('/list', tokenValidation, async (req, res) => {
     const user = UserSchema;
-    await user.find().then(list =>{
+    await user.find().select('name phone age gender hobbie at_created').then(list =>{
         res.send(list);
     });
 });
