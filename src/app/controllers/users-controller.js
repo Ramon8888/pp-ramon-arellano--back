@@ -78,7 +78,7 @@ router.get('/advanced-search', tokenValidation, async (req, res) =>{
                 $and: [{
                     age: {$gte: 18}
                 },{
-                    gender: 'Woman'
+                    gender: 'F'
                 },{
                     at_created: {$gte: fDate}
                 }]
